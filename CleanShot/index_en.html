@@ -56,29 +56,5 @@
         <a href="cleanshot_privacy_en.html">Privacy Policy</a>
         <a href="mailto:support@ntfy.vip">Contact Us</a>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const userLang = navigator.language || navigator.userLanguage;
-            const baseUrl = '/CleanShot/';
-            const langMap = {
-                'zh-CN': 'index.html',
-                'zh': 'index.html',
-                'en': 'index_en.html',
-                'de': 'index_de.html',
-                'fr': 'index_fr.html',
-                'ko': 'index_ko.html',
-                'ja': 'index_ja.html'
-            };
-            
-            if (window.location.pathname === '/CleanShot/index_en.html') {
-                const targetLang = userLang.split('-')[0];
-                const targetPage = langMap[targetLang] || 'index_en.html';
-                if (targetPage !== 'index_en.html') {
-                    window.location.replace(baseUrl + targetPage);
-                }
-            }
-        });
-    </script>
 </body>
 </html> 
