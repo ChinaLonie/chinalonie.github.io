@@ -185,6 +185,7 @@
             const baseUrl = '/CleanShot/';
             const langMap = {
                 'zh-CN': 'index.html',
+                'zh': 'index.html',
                 'en': 'index_en.html',
                 'de': 'index_de.html',
                 'fr': 'index_fr.html',
@@ -192,13 +193,12 @@
                 'ja': 'index_ja.html'
             };
             
-            const defaultPage = 'index_en.html';
-            // 检查当前页面是否需要重定向
-            const currentPath = window.location.pathname;
-            if (currentPath.endsWith('/CleanShot/index.html')) {
+            if (window.location.pathname === '/CleanShot/index.html' || 
+                window.location.pathname === '/CleanShot/') {
                 const targetLang = userLang.split('-')[0];
-                if (langMap[targetLang] && currentPath !== baseUrl + langMap[targetLang]) {
-                    window.location.replace(baseUrl + langMap[targetLang]);
+                const targetPage = langMap[targetLang] || 'index_en.html';
+                if (targetPage !== 'index.html') {
+                    window.location.replace(baseUrl + targetPage);
                 }
             }
         });
