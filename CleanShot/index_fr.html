@@ -41,6 +41,15 @@
             font-size: 1.5rem;
             font-weight: bold;
             color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
         }
         
         .language-selector {
@@ -138,7 +147,10 @@
 <body>
     <header class="header">
         <nav class="nav">
-            <div class="logo">Gestionnaire de Captures</div>
+            <div class="logo">
+                <img src="/CleanShot/CleanShot2.png" alt="CleanShot Logo">
+                <span>Gestionnaire de Captures</span>
+            </div>
             <div class="language-selector">
                 <select onchange="switchLanguage(this)">
                     <option value="/CleanShot/index_fr.html" selected>Français</option>
