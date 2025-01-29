@@ -60,21 +60,23 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const userLang = navigator.language || navigator.userLanguage;
+            const baseUrl = '/CleanShot/';
             const langMap = {
-                'zh-CN': 'https://chinalonie.github.io/CleanShot/index.html',
-                'en': 'https://chinalonie.github.io/CleanShot/index_en.html',
-                'de': 'https://chinalonie.github.io/CleanShot/index_de.html',
-                'fr': 'https://chinalonie.github.io/CleanShot/index_fr.html',
-                'ko': 'https://chinalonie.github.io/CleanShot/index_ko.html',
-                'ja': 'https://chinalonie.github.io/CleanShot/index_ja.html'
+                'zh-CN': 'index.html',
+                'zh': 'index.html',
+                'en': 'index_en.html',
+                'de': 'index_de.html',
+                'fr': 'index_fr.html',
+                'ko': 'index_ko.html',
+                'ja': 'index_ja.html'
             };
             
-            const defaultPage = 'https://chinalonie.github.io/CleanShot/index_en.html';
-            const targetPage = langMap[userLang] || defaultPage;
-            
-            if (window.location.pathname.includes('/CleanShot/index_en.html') && 
-                targetPage !== 'https://chinalonie.github.io/CleanShot/index_en.html') {
-                window.location.href = targetPage;
+            if (window.location.pathname === '/CleanShot/index_en.html') {
+                const targetLang = userLang.split('-')[0];
+                const targetPage = langMap[targetLang] || 'index_en.html';
+                if (targetPage !== 'index_en.html') {
+                    window.location.replace(baseUrl + targetPage);
+                }
             }
         });
     </script>
