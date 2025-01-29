@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot Manager - Intelligentes Screenshot-Verwaltungstool</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --text-color: #333;
+            --bg-color: #F5F5F7;
+        }
+        /* ... 复用 index.html 中的所有样式 ... */
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Screenshot Manager</div>
+            <div class="language-selector">
+                <select onchange="window.location.href=this.value">
+                    <option value="index_de.html" selected>Deutsch</option>
+                    <option value="index.html">简体中文</option>
+                    <option value="index_en.html">English</option>
+                    <option value="index_fr.html">Français</option>
+                    <option value="index_ko.html">한국어</option>
+                    <option value="index_ja.html">日本語</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Intelligentes Screenshot-Verwaltungstool</h1>
+        <p>Organisieren Sie Ihre Screenshots mühelos und gewinnen Sie Speicherplatz. Intelligente Kategorisierung und Ein-Klick-Bereinigung für eine aufgeräumtere Fotobibliothek.</p>
+        <a href="https://apps.apple.com/app/id6740841608" class="download-btn">Jetzt Herunterladen</a>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Intelligente Erkennung</h3>
+            <p>Automatische Identifizierung und Kategorisierung Ihrer Screenshots, unterstützt verschiedene Screenshot-Typen für eine mühelose Organisation.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Ein-Klick-Bereinigung</h3>
+            <p>Filtern Sie unnötige Screenshots schnell und löschen Sie sie mit einem Tippen, um wertvollen Speicherplatz freizugeben.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Sicher & Geschützt</h3>
+            <p>Alle Operationen werden lokal auf Ihrem Gerät ausgeführt. Keine Bilder werden hochgeladen, Ihre Privatsphäre wird geschützt.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <a href="cleanshot_privacy_de.html">Datenschutzerklärung</a>
+        <a href="mailto:support@ntfy.vip">Kontakt</a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            const langMap = {
+                'zh-CN': 'index.html',
+                'en': 'index_en.html',
+                'de': 'index_de.html',
+                'fr': 'index_fr.html',
+                'ko': 'index_ko.html',
+                'ja': 'index_ja.html'
+            };
+            
+            const defaultPage = 'index_en.html';
+            const targetPage = langMap[userLang] || defaultPage;
+            
+            if (window.location.pathname.endsWith('index_de.html') && targetPage !== 'index_de.html') {
+                window.location.href = targetPage;
+            }
+        });
+    </script>
+</body>
+</html> 
