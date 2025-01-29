@@ -142,12 +142,12 @@
             <div class="logo">截图清理</div>
             <div class="language-selector">
                 <select onchange="window.location.replace(this.value)">
-                    <option value="https://chinalonie.github.io/CleanShot/index.html" selected>简体中文</option>
-                    <option value="https://chinalonie.github.io/CleanShot/index_en.html">English</option>
-                    <option value="https://chinalonie.github.io/CleanShot/index_de.html">Deutsch</option>
-                    <option value="https://chinalonie.github.io/CleanShot/index_fr.html">Français</option>
-                    <option value="https://chinalonie.github.io/CleanShot/index_ko.html">한국어</option>
-                    <option value="https://chinalonie.github.io/CleanShot/index_ja.html">日本語</option>
+                    <option value="/CleanShot/index.html" selected>简体中文</option>
+                    <option value="/CleanShot/index_en.html">English</option>
+                    <option value="/CleanShot/index_de.html">Deutsch</option>
+                    <option value="/CleanShot/index_fr.html">Français</option>
+                    <option value="/CleanShot/index_ko.html">한국어</option>
+                    <option value="/CleanShot/index_ja.html">日本語</option>
                 </select>
             </div>
         </nav>
@@ -182,22 +182,24 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const userLang = navigator.language || navigator.userLanguage;
+            const baseUrl = '/CleanShot/';
             const langMap = {
-                'zh-CN': 'https://chinalonie.github.io/CleanShot/index.html',
-                'en': 'https://chinalonie.github.io/CleanShot/index_en.html',
-                'de': 'https://chinalonie.github.io/CleanShot/index_de.html',
-                'fr': 'https://chinalonie.github.io/CleanShot/index_fr.html',
-                'ko': 'https://chinalonie.github.io/CleanShot/index_ko.html',
-                'ja': 'https://chinalonie.github.io/CleanShot/index_ja.html'
+                'zh-CN': 'index.html',
+                'en': 'index_en.html',
+                'de': 'index_de.html',
+                'fr': 'index_fr.html',
+                'ko': 'index_ko.html',
+                'ja': 'index_ja.html'
             };
             
-            const defaultPage = 'https://chinalonie.github.io/CleanShot/index_en.html';
-            const targetPage = langMap[userLang] || defaultPage;
-            
-            const currentUrl = window.location.href;
-            if (currentUrl.endsWith('/CleanShot/index.html') && 
-                currentUrl !== targetPage) {
-                window.location.replace(targetPage);
+            const defaultPage = 'index_en.html';
+            // 检查当前页面是否需要重定向
+            const currentPath = window.location.pathname;
+            if (currentPath.endsWith('/CleanShot/index.html')) {
+                const targetLang = userLang.split('-')[0];
+                if (langMap[targetLang] && currentPath !== baseUrl + langMap[targetLang]) {
+                    window.location.replace(baseUrl + langMap[targetLang]);
+                }
             }
         });
     </script>
