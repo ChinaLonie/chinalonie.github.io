@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크린샷 관리자 - 스마트 스크린샷 관리 도구</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --text-color: #333;
+            --bg-color: #F5F5F7;
+        }
+        /* ... 复用 index.html 中的所有样式 ... */
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">스크린샷 관리자</div>
+            <div class="language-selector">
+                <select onchange="window.location.href=this.value">
+                    <option value="index_ko.html" selected>한국어</option>
+                    <option value="index.html">简体中文</option>
+                    <option value="index_en.html">English</option>
+                    <option value="index_de.html">Deutsch</option>
+                    <option value="index_fr.html">Français</option>
+                    <option value="index_ja.html">日本語</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>스마트 스크린샷 관리 도구</h1>
+        <p>스크린샷을 쉽게 정리하고 저장 공간을 확보하세요. 스마트한 분류와 원클릭 정리로 더 깔끔한 사진 라이브러리를 만드세요.</p>
+        <a href="https://apps.apple.com/app/id6740841608" class="download-btn">지금 다운로드</a>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>스마트 인식</h3>
+            <p>스크린샷을 자동으로 식별하고 분류합니다. 다양한 스크린샷 유형을 지원하여 손쉬운 정리가 가능합니다.</p>
+        </div>
+        <div class="feature-card">
+            <h3>원클릭 정리</h3>
+            <p>불필요한 스크린샷을 빠르게 필터링하고 한 번의 탭으로 삭제하여 소중한 저장 공간을 확보하세요.</p>
+        </div>
+        <div class="feature-card">
+            <h3>안전하고 신뢰할 수 있음</h3>
+            <p>모든 작업은 사용자의 기기에서 로컬로 실행됩니다. 어떠한 이미지도 업로드되지 않아 개인정보가 보호됩니다.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <a href="cleanshot_privacy_ko.html">개인정보 처리방침</a>
+        <a href="mailto:support@ntfy.vip">문의하기</a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            const langMap = {
+                'zh-CN': 'index.html',
+                'en': 'index_en.html',
+                'de': 'index_de.html',
+                'fr': 'index_fr.html',
+                'ko': 'index_ko.html',
+                'ja': 'index_ja.html'
+            };
+            
+            const defaultPage = 'index_en.html';
+            const targetPage = langMap[userLang] || defaultPage;
+            
+            if (window.location.pathname.endsWith('index_ko.html') && targetPage !== 'index_ko.html') {
+                window.location.href = targetPage;
+            }
+        });
+    </script>
+</body>
+</html> 
