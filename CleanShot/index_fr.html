@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire de Captures - Outil Intelligent de Gestion des Captures d'Écran</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --text-color: #333;
+            --bg-color: #F5F5F7;
+        }
+        /* ... 复用 index.html 中的所有样式 ... */
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Gestionnaire de Captures</div>
+            <div class="language-selector">
+                <select onchange="window.location.href=this.value">
+                    <option value="index_fr.html" selected>Français</option>
+                    <option value="index.html">简体中文</option>
+                    <option value="index_en.html">English</option>
+                    <option value="index_de.html">Deutsch</option>
+                    <option value="index_ko.html">한국어</option>
+                    <option value="index_ja.html">日本語</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Outil Intelligent de Gestion des Captures d'Écran</h1>
+        <p>Organisez facilement vos captures d'écran et libérez de l'espace de stockage. Catégorisation intelligente et nettoyage en un clic pour une photothèque plus ordonnée.</p>
+        <a href="https://apps.apple.com/app/id6740841608" class="download-btn">Télécharger Maintenant</a>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Reconnaissance Intelligente</h3>
+            <p>Identification et catégorisation automatiques de vos captures d'écran, prenant en charge différents types de captures pour une organisation sans effort.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Nettoyage en Un Clic</h3>
+            <p>Filtrez rapidement les captures d'écran inutiles et supprimez-les d'un seul toucher, libérant ainsi un espace de stockage précieux.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Sûr et Sécurisé</h3>
+            <p>Toutes les opérations sont effectuées localement sur votre appareil. Aucune image n'est téléchargée, protégeant votre vie privée.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <a href="cleanshot_privacy_fr.html">Politique de Confidentialité</a>
+        <a href="mailto:support@ntfy.vip">Nous Contacter</a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            const langMap = {
+                'zh-CN': 'index.html',
+                'en': 'index_en.html',
+                'de': 'index_de.html',
+                'fr': 'index_fr.html',
+                'ko': 'index_ko.html',
+                'ja': 'index_ja.html'
+            };
+            
+            const defaultPage = 'index_en.html';
+            const targetPage = langMap[userLang] || defaultPage;
+            
+            if (window.location.pathname.endsWith('index_fr.html') && targetPage !== 'index_fr.html') {
+                window.location.href = targetPage;
+            }
+        });
+    </script>
+</body>
+</html> 
