@@ -20,7 +20,7 @@
             <div class="logo">Screenshot Manager</div>
             <div class="language-selector">
                 <select onchange="window.location.href=this.value">
-                    <option value="index_en.html" selected>English</option>
+                    <option value="https://chinalonie.github.io/CleanShot/index_en.html" selected>English</option>
                     <option value="https://chinalonie.github.io/CleanShot/index.html">简体中文</option>
                     <option value="https://chinalonie.github.io/CleanShot/index_de.html">Deutsch</option>
                     <option value="https://chinalonie.github.io/CleanShot/index_fr.html">Français</option>
@@ -61,18 +61,19 @@
         document.addEventListener('DOMContentLoaded', function() {
             const userLang = navigator.language || navigator.userLanguage;
             const langMap = {
-                'zh-CN': 'index.html',
-                'en': 'index_en.html',
-                'de': 'index_de.html',
-                'fr': 'index_fr.html',
-                'ko': 'index_ko.html',
-                'ja': 'index_ja.html'
+                'zh-CN': 'https://chinalonie.github.io/CleanShot/index.html',
+                'en': 'https://chinalonie.github.io/CleanShot/index_en.html',
+                'de': 'https://chinalonie.github.io/CleanShot/index_de.html',
+                'fr': 'https://chinalonie.github.io/CleanShot/index_fr.html',
+                'ko': 'https://chinalonie.github.io/CleanShot/index_ko.html',
+                'ja': 'https://chinalonie.github.io/CleanShot/index_ja.html'
             };
             
-            const defaultPage = 'index_en.html';
+            const defaultPage = 'https://chinalonie.github.io/CleanShot/index_en.html';
             const targetPage = langMap[userLang] || defaultPage;
             
-            if (window.location.pathname.endsWith('index_en.html') && targetPage !== 'index_en.html') {
+            if (window.location.pathname.includes('/CleanShot/index_en.html') && 
+                targetPage !== 'https://chinalonie.github.io/CleanShot/index_en.html') {
                 window.location.href = targetPage;
             }
         });
