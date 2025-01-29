@@ -42,6 +42,15 @@
             font-size: 1.5rem;
             font-weight: bold;
             color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
         }
 
         .language-selector {
@@ -139,7 +148,10 @@
 <body>
     <header class="header">
         <nav class="nav">
-            <div class="logo">截图清理</div>
+            <div class="logo">
+                <img src="/CleanShot/CleanShot2.png" alt="CleanShot Logo">
+                <span>截图清理</span>
+            </div>
             <div class="language-selector">
                 <select onchange="switchLanguage(this)">
                     <option value="/CleanShot/index.html" selected>简体中文</option>
