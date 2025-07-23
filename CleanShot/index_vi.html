@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestionnaire de Captures - Outil Intelligent de Gestion des Captures d'Écran</title>
+    <title>Quản lý ảnh chụp màn hình - Công cụ tổ chức ảnh chụp màn hình thông minh</title>
     <style>
         :root {
             --primary-color: #007AFF;
             --text-color: #333;
             --bg-color: #F5F5F7;
         }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             margin: 0;
@@ -18,7 +19,7 @@
             color: var(--text-color);
             line-height: 1.6;
         }
-        
+
         .header {
             background-color: white;
             padding: 1rem;
@@ -28,7 +29,7 @@
             top: 0;
             z-index: 100;
         }
-        
+
         .nav {
             max-width: 1200px;
             margin: 0 auto;
@@ -36,7 +37,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
@@ -45,45 +46,40 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         .logo img {
             width: 32px;
             height: 32px;
             border-radius: 8px;
         }
-        
-        .language-selector {
-            position: relative;
-            display: inline-block;
-        }
-        
+
         .language-selector select {
             padding: 0.5rem;
             border: 1px solid #ddd;
             border-radius: 4px;
             background-color: white;
         }
-        
+
         .hero {
             margin-top: 80px;
             padding: 4rem 2rem;
             text-align: center;
             background-color: white;
         }
-        
+
         .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             color: var(--text-color);
         }
-        
+
         .hero p {
             font-size: 1.2rem;
             color: #666;
             max-width: 600px;
             margin: 0 auto 2rem;
         }
-        
+
         .download-btn {
             display: inline-block;
             background-color: var(--primary-color);
@@ -94,11 +90,11 @@
             font-weight: bold;
             transition: background-color 0.3s;
         }
-        
+
         .download-btn:hover {
             background-color: #0056b3;
         }
-        
+
         .features {
             max-width: 1200px;
             margin: 4rem auto;
@@ -107,32 +103,32 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-        
+
         .feature-card {
             background-color: white;
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        
+
         .feature-card h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
         }
-        
+
         .footer {
             background-color: white;
             padding: 2rem;
             text-align: center;
             margin-top: 4rem;
         }
-        
+
         .footer a {
             color: var(--primary-color);
             text-decoration: none;
             margin: 0 1rem;
         }
-        
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
@@ -149,14 +145,15 @@
         <nav class="nav">
             <div class="logo">
                 <img src="/CleanShot/CleanShot2.png" alt="CleanShot Logo">
-                <span>Gestionnaire de Captures</span>
+                <span>Quản lý ảnh chụp màn hình</span>
             </div>
             <div class="language-selector">
                 <select onchange="switchLanguage(this)">
-                    <option value="/CleanShot/index_fr.html" selected>Français</option>
+                    <option value="/CleanShot/index_vi.html" selected>Tiếng Việt</option>
                     <option value="/CleanShot/index.html">简体中文</option>
                     <option value="/CleanShot/index_en.html">English</option>
                     <option value="/CleanShot/index_de.html">Deutsch</option>
+                    <option value="/CleanShot/index_fr.html">Français</option>
                     <option value="/CleanShot/index_ko.html">한국어</option>
                     <option value="/CleanShot/index_ja.html">日本語</option>
                 </select>
@@ -165,29 +162,29 @@
     </header>
 
     <section class="hero">
-        <h1>Outil Intelligent de Gestion des Captures d'Écran</h1>
-        <p>Organisez facilement vos captures d'écran et libérez de l'espace de stockage. Catégorisation intelligente et nettoyage en un clic pour une photothèque plus ordonnée.</p>
-        <a href="https://apps.apple.com/app/id6740841608" class="download-btn">Télécharger Maintenant</a>
+        <h1>Công cụ quản lý ảnh chụp màn hình thông minh</h1>
+        <p>Dễ dàng sắp xếp ảnh chụp màn hình của bạn và giải phóng dung lượng lưu trữ. Phân loại thông minh và dọn dẹp một cú nhấp chuột để có thư viện ảnh gọn gàng hơn.</p>
+        <a href="https://apps.apple.com/app/id6740841608" class="download-btn">Tải ngay</a>
     </section>
 
     <section class="features">
         <div class="feature-card">
-            <h3>Reconnaissance Intelligente</h3>
-            <p>Identification et catégorisation automatiques de vos captures d'écran, prenant en charge différents types de captures pour une organisation sans effort.</p>
+            <h3>Nhận dạng thông minh</h3>
+            <p>Tự động nhận dạng và phân loại ảnh chụp màn hình của bạn, hỗ trợ nhiều loại ảnh chụp màn hình khác nhau để sắp xếp dễ dàng hơn.</p>
         </div>
         <div class="feature-card">
-            <h3>Nettoyage en Un Clic</h3>
-            <p>Filtrez rapidement les captures d'écran inutiles et supprimez-les d'un seul toucher, libérant ainsi un espace de stockage précieux.</p>
+            <h3>Dọn dẹp một cú nhấp</h3>
+            <p>Nhanh chóng lọc các ảnh chụp màn hình không mong muốn và xóa chúng chỉ bằng một lần chạm, giải phóng dung lượng lưu trữ quý giá.</p>
         </div>
         <div class="feature-card">
-            <h3>Sûr et Sécurisé</h3>
-            <p>Toutes les opérations sont effectuées localement sur votre appareil. Aucune image n'est téléchargée, protégeant votre vie privée.</p>
+            <h3>An toàn và đáng tin cậy</h3>
+            <p>Tất cả các thao tác được thực hiện cục bộ trên thiết bị của bạn. Không có hình ảnh nào được tải lên, bảo vệ quyền riêng tư của bạn.</p>
         </div>
     </section>
 
     <footer class="footer">
-        <a href="/CleanShot/cleanshot_privacy_fr.html">Politique de Confidentialité</a>
-        <a href="mailto:support@ntfy.vip">Nous Contacter</a>
+        <a href="/CleanShot/cleanshot_privacy_vi.html">Chính sách bảo mật</a>
+        <a href="mailto:support@ntfy.vip">Liên hệ chúng tôi</a>
     </footer>
 
     <script>
@@ -196,4 +193,4 @@
         }
     </script>
 </body>
-</html> 
+</html>
