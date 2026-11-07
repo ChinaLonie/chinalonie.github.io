@@ -142,7 +142,45 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+    
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(0,123,255,.12), rgba(90,200,250,.14));
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .download-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+</style>
 </head>
 <body>
     <header class="header">
@@ -172,21 +210,39 @@
     <section class="hero">
         <h1>Rendez de l'espace à votre téléphone</h1>
         <p>Trouvez les photos en double, les images anciennes et les gros fichiers, nettoyez par mois et récupérez de l'espace. Tout reste sur l'appareil.</p>
-        <a href="https://apps.apple.com/app/id6740841608" class="download-btn">Télécharger Maintenant</a>
+        <a href="https://apps.apple.com/app/id6740841608" class="download-btn"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>Télécharger gratuitement</a>
     </section>
 
     <section class="features">
         <div class="feature-card">
-            <h3>Reconnaissance Intelligente</h3>
-            <p>Identification et catégorisation automatiques de vos captures d'écran, prenant en charge différents types de captures pour une organisation sans effort.</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+            <h3>Bilan d’espace</h3>
+            <p>Doublons, images anciennes, captures longues et vides, avec nombre et taille en un coup d’œil.</p>
         </div>
         <div class="feature-card">
-            <h3>Nettoyage en Un Clic</h3>
-            <p>Filtrez rapidement les captures d'écran inutiles et supprimez-les d'un seul toucher, libérant ainsi un espace de stockage précieux.</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></div>
+            <h3>Nettoyer par date</h3>
+            <p>Nombre et espace par mois : sélectionnez des mois entiers ou supprimez ce qui date de plus de 30/90 jours ou un an.</p>
         </div>
         <div class="feature-card">
-            <h3>Sûr et Sécurisé</h3>
-            <p>Toutes les opérations sont effectuées localement sur votre appareil. Aucune image n'est téléchargée, protégeant votre vie privée.</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/></svg></div>
+            <h3>Gros fichiers d’abord</h3>
+            <p>Triés du plus lourd au plus léger, avec la taille sur chaque vignette : les plus gourmands partent d’abord.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+            <h3>Historique & rapport mensuel</h3>
+            <p>Espace libéré, nettoyages du mois et jour le plus actif, sur une seule page.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+            <h3>Regrouper les rafales</h3>
+            <p>Les images enregistrées coup sur coup sont regroupées automatiquement, la dernière reste.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+            <h3>Confidentialité d’abord</h3>
+            <p>Tout se passe sur l’appareil : aucune photo n’est envoyée, aucune permission inutile demandée.</p>
         </div>
     </section>
 

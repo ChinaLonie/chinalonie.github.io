@@ -138,7 +138,45 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+    
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(0,123,255,.12), rgba(90,200,250,.14));
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .download-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+</style>
 </head>
 <body>
     <header class="header">
@@ -168,21 +206,39 @@
     <section class="hero">
         <h1>คืนพื้นที่ให้มือถือของคุณ</h1>
         <p>ค้นหารูปซ้ำ รูปเก่า และไฟล์ขนาดใหญ่ ล้างตามเดือน ทั้งหมดทำในเครื่อง</p>
-        <a href="https://apps.apple.com/app/id6740841608" class="download-btn">ดาวน์โหลด</a>
+        <a href="https://apps.apple.com/app/id6740841608" class="download-btn"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>ดาวน์โหลดฟรี</a>
     </section>
 
     <section class="features">
         <div class="feature-card">
-            <h3>การจดจำจฉยะ</h3>
-            <p>และจัดการภาพหน้าจอโดย ภาพหน้าจอหลายประเภท ทำให้ระบง่าย</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+            <h3>ตรวจพื้นที่</h3>
+            <p>รูปซ้ำ รูปเก่า ภาพยาวและภาพว่าง พร้อมจำนวนและขนาดในพริบตา แล้วล้างได้ทันที</p>
         </div>
         <div class="feature-card">
-            <h3>ทำความสะอาดด้วย</h3>
-            <p>กรองภาพหน้าจอไม่ต้องการอย่างรวดเร็วและลบด้วยการแตะครั้ง เอ่อม้นเก็บข้อมูลค่า</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></div>
+            <h3>ล้างตามวันที่</h3>
+            <p>ดูจำนวนและพื้นที่รายเดือน เลือกทั้งเดือน หรือลบสิ่งที่เก่ากว่า 30/90 วัน หรือ 1 ปี</p>
         </div>
         <div class="feature-card">
-            <h3>และเชื่อได้</h3>
-            <p>การจัดการจะทำในเครือง ไม่ปโหลดภาพใดๆ ปกป้องความเป็นส่วน</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/></svg></div>
+            <h3>ไฟล์ใหญ่ก่อน</h3>
+            <p>เรียงจากใหญ่ไปเล็ก พร้อมขนาดบนภาพย่อ เพื่อลบสิ่งที่กินพื้นที่มากที่สุดก่อน</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+            <h3>ประวัติและรายงานรายเดือน</h3>
+            <p>พื้นที่ที่คืนไป จำนวนครั้งที่ล้างเดือนนี้ และวันที่ถ่ายมากที่สุด ในหน้าเดียว</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+            <h3>จัดกลุ่มภาพต่อเนื่อง</h3>
+            <p>ภาพที่บันทึกติดกันจะถูกจัดกลุ่มอัตโนมัติและเก็บภาพสุดท้ายไว้</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+            <h3>ความเป็นส่วนตัวมาก่อน</h3>
+            <p>วิเคราะห์ในเครื่องทั้งหมด รูปไม่ถูกอัปโหลด และไม่ขอสิทธิ์ที่ไม่จำเป็น</p>
         </div>
     </section>
 

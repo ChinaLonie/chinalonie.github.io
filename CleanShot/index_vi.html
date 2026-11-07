@@ -138,7 +138,45 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+    
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(0,123,255,.12), rgba(90,200,250,.14));
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .download-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+</style>
 </head>
 <body>
     <header class="header">
@@ -168,21 +206,39 @@
     <section class="hero">
         <h1>Trả lại không gian cho điện thoại</h1>
         <p>Tìm ảnh trùng, ảnh cũ và tệp lớn, dọn theo tháng. Mọi thứ xử lý trên máy.</p>
-        <a href="https://apps.apple.com/app/id6740841608" class="download-btn">Tải ngay</a>
+        <a href="https://apps.apple.com/app/id6740841608" class="download-btn"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>Tải miễn phí</a>
     </section>
 
     <section class="features">
         <div class="feature-card">
-            <h3>Nhận dạng thông minh</h3>
-            <p>Tự động nhận dạng và phân loại ảnh chụp màn hình của bạn, hỗ trợ nhiều loại ảnh chụp màn hình khác nhau để sắp xếp dễ dàng hơn.</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+            <h3>Kiểm tra dung lượng</h3>
+            <p>Ảnh trùng, ảnh cũ, ảnh dài và ảnh trống với số lượng và dung lượng trong nháy mắt.</p>
         </div>
         <div class="feature-card">
-            <h3>Dọn dẹp một cú nhấp</h3>
-            <p>Nhanh chóng lọc các ảnh chụp màn hình không mong muốn và xóa chúng chỉ bằng một lần chạm, giải phóng dung lượng lưu trữ quý giá.</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></div>
+            <h3>Dọn theo ngày</h3>
+            <p>Xem số lượng và dung lượng theo tháng; chọn cả tháng hoặc xóa mọi thứ cũ hơn 30/90 ngày hoặc một năm.</p>
         </div>
         <div class="feature-card">
-            <h3>An toàn và đáng tin cậy</h3>
-            <p>Tất cả các thao tác được thực hiện cục bộ trên thiết bị của bạn. Không có hình ảnh nào được tải lên, bảo vệ quyền riêng tư của bạn.</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/></svg></div>
+            <h3>Tệp lớn trước</h3>
+            <p>Sắp xếp từ lớn đến nhỏ, dung lượng hiển thị trên ảnh thu nhỏ để dọn thứ nặng nhất trước.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+            <h3>Lịch sử và báo cáo tháng</h3>
+            <p>Dung lượng đã giải phóng, số lần dọn trong tháng và ngày bận rộn nhất trên một trang.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+            <h3>Gộp chuỗi ảnh</h3>
+            <p>Ảnh lưu liên tiếp được tự động gộp nhóm và giữ ảnh cuối, rất hợp cho ảnh chụp cuộn.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+            <h3>Ưu tiên quyền riêng tư</h3>
+            <p>Mọi phân tích trên máy, ảnh không được tải lên và không xin quyền không cần thiết.</p>
         </div>
     </section>
 

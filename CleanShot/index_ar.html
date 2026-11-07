@@ -139,7 +139,45 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+    
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(0,123,255,.12), rgba(90,200,250,.14));
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .download-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+</style>
 </head>
 <body>
     <header class="header">
@@ -169,21 +207,39 @@
     <section class="hero">
         <h1>أعد المساحة إلى هاتفك</h1>
         <p>اعثر على الصور المكررة والقديمة والملفات الكبيرة، ونظّف حسب الشهر. كل شيء يعمل على جهازك.</p>
-        <a href="https://apps.apple.com/app/id6740841608" class="download-btn">تحميل الآن</a>
+        <a href="https://apps.apple.com/app/id6740841608" class="download-btn"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>تحميل مجاني</a>
     </section>
 
     <section class="features">
         <div class="feature-card">
-            <h3>التعرف الذكي</h3>
-            <p>تحديد وتصنيف لقطات الشاشة تلقائ، يدعم أنواع مختلفة من لقطات الشاشة لتنظيم سهل.</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+            <h3>فحص المساحة</h3>
+            <p>صور مكررة وقديمة ولقطات طويلة وفارغة مع العدد والحجم في لمحة، ثم نظّف دفعة واحدة.</p>
         </div>
         <div class="feature-card">
-            <h3>تنظيف بنقرة واحدة</h3>
-            <p>فلترة سريعة للقطات الشاشة غير المرغوب فيها وحذفها بلمسة واحدة، لتحرير مساحة تخزين قيمة.</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></div>
+            <h3>التنظيف حسب التاريخ</h3>
+            <p>العدد والمساحة لكل شهر؛ اختر شهرًا كاملًا أو احذف ما هو أقدم من 30 أو 90 يومًا أو سنة.</p>
         </div>
         <div class="feature-card">
-            <h3>آمن وموثوق</h3>
-            <p>جميع العمليات تتم محلي على جهازك. لا يتم رفع أي صور، مما يحمي خصوصيتك.</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/></svg></div>
+            <h3>الملفات الكبيرة أولًا</h3>
+            <p>مرتبة من الأكبر إلى الأصغر مع الحجم على كل مصغّرة، لتبدأ بما يشغل أكبر مساحة.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+            <h3>السجل والتقرير الشهري</h3>
+            <p>المساحة المحررة، وعدد مرات التنظيف هذا الشهر، وأكثر يوم نشاطًا في صفحة واحدة.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+            <h3>تجميع الصور المتتابعة</h3>
+            <p>الصور المحفوظة تباعًا تُجمَّع تلقائيًا مع الاحتفاظ بالأخيرة، مثالي للقطات الطويلة.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+            <h3>الخصوصية أولًا</h3>
+            <p>كل التحليل على الجهاز، ولا تُرفع الصور، ولا تُطلب أذونات غير ضرورية.</p>
         </div>
     </section>
 

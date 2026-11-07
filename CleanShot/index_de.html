@@ -141,7 +141,45 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+    
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(0,123,255,.12), rgba(90,200,250,.14));
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .download-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+</style>
 </head>
 <body>
     <header class="header">
@@ -171,21 +209,39 @@
     <section class="hero">
         <h1>Geben Sie Ihrem Handy den Speicher zurück</h1>
         <p>Doppelte Fotos, alte Bilder und große Dateien finden, monatsweise aufräumen und Speicher zurückgewinnen. Alles bleibt auf dem Gerät.</p>
-        <a href="https://apps.apple.com/app/id6740841608" class="download-btn">Jetzt Herunterladen</a>
+        <a href="https://apps.apple.com/app/id6740841608" class="download-btn"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>Kostenlos laden</a>
     </section>
 
     <section class="features">
         <div class="feature-card">
-            <h3>Intelligente Erkennung</h3>
-            <p>Automatische Identifizierung und Kategorisierung Ihrer Screenshots, unterstützt verschiedene Screenshot-Typen für eine mühelose Organisation.</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+            <h3>Speicher-Check</h3>
+            <p>Duplikate, alte Bilder, lange und leere Screenshots – Anzahl und Größe auf einen Blick, direkt zum Aufräumen.</p>
         </div>
         <div class="feature-card">
-            <h3>Ein-Klick-Bereinigung</h3>
-            <p>Filtern Sie unnötige Screenshots schnell und löschen Sie sie mit einem Tippen, um wertvollen Speicherplatz freizugeben.</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></div>
+            <h3>Nach Zeit aufräumen</h3>
+            <p>Monat für Monat Anzahl und Speicher sehen, ganze Monate markieren oder alles Ältere als 30/90 Tage bzw. ein Jahr entfernen.</p>
         </div>
         <div class="feature-card">
-            <h3>Sicher & Geschützt</h3>
-            <p>Alle Operationen werden lokal auf Ihrem Gerät ausgeführt. Keine Bilder werden hochgeladen, Ihre Privatsphäre wird geschützt.</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/></svg></div>
+            <h3>Große Dateien zuerst</h3>
+            <p>Vom größten zum kleinsten sortiert, mit Größe auf jedem Vorschaubild – die größten Platzfresser zuerst.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+            <h3>Verlauf & Monatsbericht</h3>
+            <p>Wie viel Speicher freigegeben, wie viel pro Monat aufgeräumt und der aktivste Tag – alles auf einen Blick.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+            <h3>Serien gruppieren</h3>
+            <p>Direkt nacheinander gespeicherte Bilder werden automatisch gruppiert; das letzte bleibt, ideal für Scroll-Screenshots.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+            <h3>Datenschutz zuerst</h3>
+            <p>Alles läuft auf dem Gerät, Fotos werden nie hochgeladen, keine unnötigen Berechtigungen.</p>
         </div>
     </section>
 

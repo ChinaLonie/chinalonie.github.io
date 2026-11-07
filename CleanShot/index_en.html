@@ -142,7 +142,45 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+    
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(0,123,255,.12), rgba(90,200,250,.14));
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .download-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+</style>
 </head>
 <body>
     <header class="header">
@@ -172,31 +210,37 @@
     <section class="hero">
         <h1>Give Your Phone Its Space Back</h1>
         <p>Find duplicate photos, old images and large files in one tap, clean up by month, and get your storage back. Everything runs on your device — nothing is uploaded.</p>
-        <a href="https://apps.apple.com/app/id6740841608" class="download-btn">Download Now</a>
+        <a href="https://apps.apple.com/app/id6740841608" class="download-btn"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>Download Free</a>
     </section>
 
     <section class="features">
         <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
             <h3>Space Checkup</h3>
             <p>Duplicates, old images, long screenshots and blank images — see exactly what is taking up space, then clean up in bulk.</p>
         </div>
         <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></div>
             <h3>Clean Up by Time</h3>
             <p>Browse by month with counts and sizes, select whole months, or clear anything older than 30 days, 90 days or a year.</p>
         </div>
         <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/></svg></div>
             <h3>Largest Files First</h3>
             <p>Sorted by size with size badges on every thumbnail, so the biggest space hogs go first.</p>
         </div>
         <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
             <h3>History &amp; Monthly Report</h3>
             <p>See how much you have freed in total, what you cleaned this month, and your busiest photo day.</p>
         </div>
         <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
             <h3>Burst Grouping</h3>
             <p>Photos saved back to back are grouped automatically, keeping the last one in each group.</p>
         </div>
         <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
             <h3>Privacy First</h3>
             <p>All analysis happens on your device. Photos are never uploaded, and no unrelated permissions are requested.</p>
         </div>

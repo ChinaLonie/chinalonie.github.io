@@ -138,7 +138,45 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+    
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(0,123,255,.12), rgba(90,200,250,.14));
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .download-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+</style>
 </head>
 <body>
     <header class="header">
@@ -168,21 +206,39 @@
     <section class="hero">
         <h1>अपने फ़ोन को जगह लौटाएँ</h1>
         <p>डुप्लिकेट फ़ोटो, पुरानी तस्वीरें और बड़ी फ़ाइलें खोजें, महीने के हिसाब से साफ़ करें। सब कुछ आपके फ़ोन पर ही होता है।</p>
-        <a href="https://apps.apple.com/app/id6740841608" class="download-btn">अभी डाउनलोड करें</a>
+        <a href="https://apps.apple.com/app/id6740841608" class="download-btn"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>मुफ़्त डाउनलोड</a>
     </section>
 
     <section class="features">
         <div class="feature-card">
-            <h3>स्मार्ट पहचान</h3>
-            <p>स्वचालित रूप से आपके स्क्रीनशॉट की पहचान और वर्गीकरण करें, विभिन्न स्क्रीनशॉट प्रकारों का समर्थन करते हुए आसान संगठन के लिए।</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+            <h3>जगह की जाँच</h3>
+            <p>डुप्लिकेट, पुरानी, लंबी और खाली तस्वीरें संख्या और साइज़ के साथ एक नज़र में।</p>
         </div>
         <div class="feature-card">
-            <h3>एक-क्लिक सफाई</h3>
-            <p>अनावश्यक स्क्रीनशॉट को तुरंत फ़िल्टर करें और एक टैप से हटाएं, मूल्यवान स्टोरेज स्पेस खाली करें।</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></div>
+            <h3>तारीख से साफ़ करें</h3>
+            <p>हर महीने की संख्या और जगह देखें; पूरा महीना चुनें या 30/90 दिन या साल से पुरानी चीज़ें हटाएँ।</p>
         </div>
         <div class="feature-card">
-            <h3>सुरक्षित और विश्वसनीय</h3>
-            <p>सभी ऑपरेशन आपके डिवाइस पर स्थानीय रूप से किए जाते हैं। कोई छवि अपलोड नहीं की जाती, आपकी गोपनीयता की सुरक्षा।</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/></svg></div>
+            <h3>बड़ी फ़ाइलें पहले</h3>
+            <p>सबसे बड़ी से छोटी तक क्रम में, हर थंबनेल पर साइज़ के साथ।</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+            <h3>इतिहास और मासिक रिपोर्ट</h3>
+            <p>खाली की गई जगह, इस महीने की सफ़ाई और सबसे व्यस्त दिन, एक ही पेज पर।</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+            <h3>सिलसिलेवार फ़ोटो समूह</h3>
+            <p>लगातार सेव हुई फ़ोटो अपने आप समूह में आ जाती हैं और आख़िरी वाली रहती है।</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+            <h3>निजता पहले</h3>
+            <p>सारा विश्लेषण डिवाइस पर, फ़ोटो अपलोड नहीं होतीं, कोई ग़ैर-ज़रूरी अनुमति नहीं।</p>
         </div>
     </section>
 

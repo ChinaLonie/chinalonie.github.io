@@ -143,7 +143,45 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+    
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(0,123,255,.12), rgba(90,200,250,.14));
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .download-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+</style>
 </head>
 <body>
     <header class="header">
@@ -173,31 +211,37 @@
     <section class="hero">
         <h1>把手机空间还给相册</h1>
         <p>一键找出重复照片、过期图片和大文件，按月批量清理，把空间还给手机。全部在本机完成，照片不会上传。</p>
-        <a href="https://apps.apple.com/app/id6740841608" class="download-btn">立即下载</a>
+        <a href="https://apps.apple.com/app/id6740841608" class="download-btn"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>免费下载</a>
     </section>
 
     <section class="features">
         <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
             <h3>空间体检</h3>
             <p>重复照片、陈旧图片、长图、空白图，各占多少一目了然，点进去就能批量处理。</p>
         </div>
         <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></div>
             <h3>按时间清理</h3>
             <p>按月查看数量与占用容量，整月一键勾选，也可以直接清理 30 天、90 天或 1 年前的旧内容。</p>
         </div>
         <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/></svg></div>
             <h3>大文件优先</h3>
             <p>按体积从大到小排列，缩略图直接标注大小，先删最占空间的那几张。</p>
         </div>
         <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
             <h3>清理记录与月报</h3>
             <p>累计释放了多少空间、每月清理了多少、最常拍照的一天，一页看清。</p>
         </div>
         <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
             <h3>连续图片归组</h3>
             <p>同一时间连续保存的图片自动归组，每组保留最后一张，滑动截屏一键整理。</p>
         </div>
         <div class="feature-card">
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
             <h3>隐私优先</h3>
             <p>所有分析都在本机完成，照片不会上传，不申请与功能无关的权限。</p>
         </div>
